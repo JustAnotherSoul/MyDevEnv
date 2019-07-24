@@ -1,0 +1,9 @@
+[core]
+	editor = vim
+	autocrlf = input
+	excludesfile = tags
+[user]
+	email = cbasile@zixcorp.com
+	name = Charles Basile
+[init]
+	templatedir = /Users/cbasile/.Personal_Scripts/git_template/
