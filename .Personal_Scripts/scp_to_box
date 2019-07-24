@@ -1,0 +1,13 @@
+#!/bin/bash
+
+#This is to scp to a particular box:
+#Takes: The profile and a file, scps the file to the profile
+
+box=`sed -n "s/$1 \(.*\)/\1/p" ~/.Personal_Scripts/scp_profiles`
+if [[ ! -z $2 ]]; then 
+  scp $2 $box
+fi
+
+box=${box%:*}
+ssh $box
+

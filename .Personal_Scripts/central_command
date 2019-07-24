@@ -1,0 +1,7 @@
+#!/bin/bash
+tmux new-window  -t central_command:1 -n containership    'cd /Users/cbasile/Arca/Code/Projects/gdi/containership'
+tmux new-window  -t central_command:2 -n hspweb   'cd /Users/cbasile/Arca/Code/Projects/gdi/hspweb'
+tmux new-window  -t central_command:3 -n archive_web   'cd /Users/cbasile/Arca/Code/Projects/gdi/archive_web'
+tmux new-window  -t central_command:4 -n monitoring   'cd /Users/cbasile/Arca/Code/Projects/montron'
+tmux new-window  -t central_command:5 -n scratchI   'cd /Users/cbasile/Arca/Code/Projects'
+tmux new-window  -t central_command:6 -n scratchII   'cd /Users/cbasile/Arca/Code/Projects'

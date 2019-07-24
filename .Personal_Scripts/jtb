@@ -1,0 +1,5 @@
+#!/bin/bash
+
+scp_to_box $1 $2
+
+echo $box

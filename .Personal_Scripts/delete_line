@@ -1,0 +1,5 @@
+#!/bin/bash
+if [[ $# -ne 2 ]]; then
+	echo "Usage: delete_line LINE_NUMBER FILE_NAME"
+fi
+awk -v var=$1 'NR !~ var' $2 >> $2.tmp; mv $2.tmp $2

@@ -1,0 +1,3 @@
+#!/bin/bash
+FILE_LOC=/Users/cjjb/.ssh/known_hosts
+awk -v var=$1 'NR !~ var' $FILE_LOC >> $FILE_LOC.tmp; mv $FILE_LOC.tmp $FILE_LOC

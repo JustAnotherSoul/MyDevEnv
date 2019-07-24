@@ -1,0 +1,30 @@
+#!/bin/bash
+#Arcanum: With the ~/Arca directory in place this then performs various file related tasks.
+
+# Find me a thing and vi it.
+function invenio {
+  list=(`find . -name $1`)
+  target=""
+  if [[ ${#list} > 1 ]]; then 
+
+  fi
+}
+
+  
+# Copy me a thing and vi it.
+function adumbro {
+  source_dir=`dirname $1`
+  dest_file="$source_dir/$2"
+  cp $1 $dest_file
+  vi $dest_file
+}
+
+# 
+
+function navigo {
+  list=(`find . -name $1`)
+  target=""  
+  if [[ ${#list} > 1 ]]; then
+    
+  fi
+}
