@@ -1,0 +1,55 @@
+set nocompatible		    "Not compatible with vi, supposed to be the first 
+filetype off			    "Don't look at filetype extensions
+call pathogen#infect()		"Pathogen go!
+call pathogen#helptags()    "Pathogen go make help files!
+set background=light
+colorscheme solarized
+
+set number 			        "Line numbers
+set relativenumber          "Relative line numbers are super useful
+set incsearch			    "Incsearch is to show you the next match as you type
+set hlsearch			    "Hlsearch shows the 
+set cursorline			"Sets a line beneath the cursor/highlights the line the cursor is on
+        				", makes it easier to see what line you're on, though
+                        "sadly makes it harder to see underscores
+set foldmethod=indent   "Indented blocks are folded
+set foldlevel=1			"Fold after the first level of indentation
+set foldcolumn=1        "Fold shows up after 1 column worth of indentation
+set shiftwidth=2        "Align tabs and auto indentation
+set tabstop=2			"Tabs look like two spaces
+set softtabstop=2		"Set tabs to be two spaces
+set expandtab 			"Tabs are actually spaces
+set wildmenu			"Show tab completion list in Vim
+set showmatch			"Looks like syntax highlighting already does this but this shows the matching bracket/paren
+
+set statusline+=%#warningmsg#
+set statusline+=%{SyntasticStatuslineFlag()}
+set statusline+=%*
+
+let g:syntastic_always_populate_loc_list = 1
+let g:syntastic_auto_loc_list = 1
+let g:syntastic_check_on_open = 1
+let g:syntastic_check_on_wq = 0
+
+syntax on			    "Syntax highlighting on
+set omnifunc=syntaxcomplete#Complete
+filetype plugin indent on	"Turns on filetype detection, indentation files based on filetype and plugins
+
+" This block says 'read in the file name being edited, if it's nothing start
+" nerdtree
+autocmd StdinReadPre * let s:std_in=1
+autocmd VimEnter * if argc() == 0 && !exists("s:std_in") | NERDTree | endif
+
+"jk is the esc command home row keys are faster than reaching aaaaaalll the
+"way up
+inoremap jk <esc> 
+imap <C-J> <C-P>
+imap <C-F> <C-X><C-O>
+
+
+map fd :TlistToggle<CR>
+"This highlights the last thing you pasted:
+"`[ selects the beginning of last insert
+"v puts us in visual mode
+"`] jumps to the end of the last insert
+nnoremap gv `[v`]

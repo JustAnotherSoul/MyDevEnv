@@ -1,0 +1,10 @@
+ssh:root@10.32.66.51:/root
+/ssh:root@10.32.66.51:/root
+/ssh:root@10.32.66.44:/root
+/ssh:root@10.32.66.53:/root
+ls
+find-file configure.bsh
+exit
+ls
+cat SecureMailGateway.log #<tempbuff>
+cat SecureMailGateway.log > #<tmpbuff>
