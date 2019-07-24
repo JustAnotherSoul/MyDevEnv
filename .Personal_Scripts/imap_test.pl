@@ -23,7 +23,7 @@ $imap = Mail::IMAPClient->new(
     Ssl=> 1,
     Authmechanism =>"PLAIN",
     User => "cbasile\@zixcorp.com",
-    Password => "Ilike31people",
+    Password => $password,
     Clear => 5 ) or die "Can't connect to $host as $username";
 
 print $imap->folders;
