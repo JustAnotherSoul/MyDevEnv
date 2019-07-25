@@ -1,2 +1,2 @@
 #!/bin/bash
-delete_line $1 /Users/cbasile/.ssh/known_hosts
+delete_line $1 ~/.ssh/known_hosts
